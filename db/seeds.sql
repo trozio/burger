@@ -1,9 +1,9 @@
 USE burgers_db;
 INSERT INTO burgers(burger_name, devoured)
-VALUES(Classic, False);
+VALUES('Classic', False);
 
 INSERT INTO burgers(burger_name, devoured)
-VALUES(Cheeseburger, False);
+VALUES('Cheeseburger', False);
 
 INSERT INTO burgers(burger_name, devoured)
-VALUES(Bacon Cheeseburger, False);
+VALUES('Bacon Cheeseburger', False);
