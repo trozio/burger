@@ -4,6 +4,7 @@ var tableName = "burgers";
 
 let orm = {
   selectAll: function(tableName, callback) {
+      
     let s = "SELECT * FROM " + tableName;
 
     connection.query(s, function(err, result) {
@@ -11,10 +12,15 @@ let orm = {
     });
   },
 
-  insertOne: function(tableName, name, callback) {
-    let s = "INSERT INTO" + tableName + "(burger_name, devoured) VALUES (?, false)";
+  insertOne: function(name, callback) {
+
+
+    let s = "INSERT INTO burgers" + "(burger_name, devoured) VALUES (?, false)";
 
     connection.query(s, [name], function(err, result) {
+        if(err){
+            console.log(err);
+        }
       console.log(result);
     });
   },

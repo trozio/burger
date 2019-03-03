@@ -1,13 +1,13 @@
 let orm = require("../config/orm.js");
 
 let burger = {
-	selectAll: function(callback){
+	selectAll: function(cb){
 orm.selectAll('burgers', function(res) {
-      res.json(res);
+      cb(res);
     });
 },
-insertOne: function(callback) {
-orm.insertOne("whopper", false);
+insertOne: function(burger, callback) {
+orm.insertOne(burger);
 },
 updateOne: function(callback){
 // Find the buyer with the most pets.
